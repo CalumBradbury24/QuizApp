@@ -7,13 +7,15 @@ const Score = ({ Score }) => {
 const [name, setName] = useState('');
 
   const handleSubmit = (e) => {
- //  e.preventDefault();//Prevent default HTML submit form behaviour so other code below can run
+   e.preventDefault();//Prevent default HTML submit form behaviour so other code below can run
     const result = {
         name: name,
         score: Score,
     }
     axios.post('https://warm-hollows-14958.herokuapp.com/', result)
         .then(res => console.log(res.data)) //Log result to console
+
+        window.alert('Submitted!')
   }
 
   return (
