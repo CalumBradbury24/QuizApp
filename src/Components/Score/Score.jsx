@@ -12,7 +12,7 @@ const [name, setName] = useState('');
         name: name,
         score: Score,
     }
-    axios.post('http://localhost:5000', result)
+    axios.post('https://warm-hollows-14958.herokuapp.com/', result)
         .then(res => console.log(res.data)) //Log result to console
   }
 
