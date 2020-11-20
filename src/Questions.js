@@ -35,4 +35,22 @@ export const questions = [
             { answerText: '7', isCorrect: true },
         ],
     },
+    {
+        questionText: 'In what modern day country was Nikola Tesla born?',
+        answerOptions: [
+            { answerText: 'Croatia', isCorrect: true },
+            { answerText: 'USA', isCorrect: false },
+            { answerText: 'Switzerland', isCorrect: false },
+            { answerText: 'Georgia', isCorrect: false },
+        ],
+    },
+    {
+        questionText: 'What does the Latin Tempus mean in English?',
+        answerOptions: [
+            { answerText: 'Bad tempered', isCorrect: false },
+            { answerText: 'Time', isCorrect: true },
+            { answerText: 'Energy', isCorrect: false },
+            { answerText: 'Tempered', isCorrect: false },
+        ],
+    },
 ];

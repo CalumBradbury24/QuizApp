@@ -1,13 +1,20 @@
 import Quiz from "./Components/quiz/quiz";
-import Header from './Components/header/header';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Splashscreen from "./Components/splashscreen/splashscreen";
 import "./App.css";
 
-//header includes score, at end display everyones results!
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <Quiz />
+      <div class="bg"></div>
+      <div class="bg bg2"></div>
+      <div class="bg bg3"></div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Splashscreen} />
+          <Route exact path="/quiz" component={Quiz} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 };

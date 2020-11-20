@@ -1,12 +1,9 @@
 import dataActionTypes from './types';
 
-export const setScore = (value) => ({
-    type: dataActionTypes.SET_SCORE, payload: value 
+export const setScore = () => ({
+    type: dataActionTypes.SET_SCORE
 });
 
-export const scoreVis = (value) => ({
-    type: dataActionTypes.SCORE_VIS, payload: value 
-});
 
 
 

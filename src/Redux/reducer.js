@@ -3,7 +3,6 @@ import DataActionTypes from "./types";
 const INITIAL_STATE = {
   //default state
   score : 0,
-  scoreShown: true
 };
 
 const dataReducer = (state = INITIAL_STATE, action = {}) => {
@@ -12,11 +11,6 @@ const dataReducer = (state = INITIAL_STATE, action = {}) => {
       return {
         ...state,
         score: state.score + 1,
-      };
-      case DataActionTypes.SCORE_VIS:
-      return {
-        ...state,
-        scoreShown: action.payload,
       };
     default:
       return state;

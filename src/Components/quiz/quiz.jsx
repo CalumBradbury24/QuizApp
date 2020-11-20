@@ -1,31 +1,38 @@
 import React, { useState } from "react";
 import { questions } from "../../Questions";
-import Score from '../Score/Score';
+import Score from "../Score/Score";
 import { connect } from "react-redux";
-import { setScore, scoreVis } from "../../Redux/actions";
+import { setScore } from "../../Redux/actions";
 import "./quiz.styles.scss";
+import ProgressBar from "../progressbar/ProgressBar";
+const length = questions.length;
 
-const Quiz = ({ onScoreChange, onQuizFinish }) => {
+const Quiz = ({ onScoreChange }) => {
   const [question, setQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
+  const [progress, setProgress] = useState((1/questions.length)*100)
+
   const handleClick = (guess) => {
     if (guess) {
       onScoreChange();
     }
-    const nextQuestion = question + 1;
+    var nextQuestion = question + 1;
+    let prog = ((nextQuestion+1)/questions.length) * 100
+
     if (nextQuestion < questions.length) {
       setQuestion(nextQuestion);
     } else {
       setShowScore(true);
-      onQuizFinish(false);
     }
+    setProgress(prog)
   };
 
   return (
     <React.Fragment>
-      {showScore ? (
-       <Score />
+      {showScore ? (//check async
+        <Score numOfQuestions={length}/>
       ) : (
+        <div className = 'page'>
         <div className="container">
           <div className="title-and-question">
             <h2 className="title">
@@ -44,7 +51,10 @@ const Quiz = ({ onScoreChange, onQuizFinish }) => {
             ))}
           </div>
         </div>
+        <ProgressBar value = {progress}/>
+        </div>
       )}
+    
     </React.Fragment>
   );
 };
@@ -52,9 +62,7 @@ const Quiz = ({ onScoreChange, onQuizFinish }) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onScoreChange: () => dispatch(setScore()),
-    onQuizFinish: () => dispatch(scoreVis()),
   };
 };
 
 export default connect(null, mapDispatchToProps)(Quiz);
-

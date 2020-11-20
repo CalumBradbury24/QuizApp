@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import axios from "axios";
 import "./Score.styles.scss";
 
-const Score = ({ Score }) => {
+const Score = ({ Score, numOfQuestions }) => {
   const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -23,17 +23,20 @@ const Score = ({ Score }) => {
       .catch((error) =>
         window.alert("Please enter your name before submitting!")
       );
-
-   
+  };
+  const getPercentage = () => {
+    return (Score / numOfQuestions) * 100;
   };
 
   return (
     <React.Fragment>
       {submitted ? (
-        <h1>Thanks for playing!</h1>
+        <h1 className = 'end-message'>Thanks for playing!</h1>
       ) : (
         <div className="form-container">
-          <h1 className="contact-title">{`Your score was: ${Score}`} </h1>
+          <h1 className="contact-title">
+            {`Your score was: ${Score}(${getPercentage()}%)`}{" "}
+          </h1>
           <form className="contact-form">
             <h1 className="contact-title" id="submit-message">
               Please submit your name!
