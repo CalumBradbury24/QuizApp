@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { questions } from "../../Questions";
 import Score from '../Score/Score';
 import { connect } from "react-redux";
-import { setScore } from "../../Redux/actions";
+import { setScore, scoreVis } from "../../Redux/actions";
 import "./quiz.styles.scss";
 
-const Quiz = ({ onScoreChange }) => {
+const Quiz = ({ onScoreChange, onQuizFinish }) => {
   const [question, setQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const handleClick = (guess) => {
@@ -17,6 +17,7 @@ const Quiz = ({ onScoreChange }) => {
       setQuestion(nextQuestion);
     } else {
       setShowScore(true);
+      onQuizFinish(false);
     }
   };
 
@@ -51,7 +52,9 @@ const Quiz = ({ onScoreChange }) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onScoreChange: () => dispatch(setScore()),
+    onQuizFinish: () => dispatch(scoreVis()),
   };
 };
 
 export default connect(null, mapDispatchToProps)(Quiz);
+
