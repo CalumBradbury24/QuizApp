@@ -35,7 +35,7 @@ const Score = ({ Score, numOfQuestions }) => {
       ) : (
         <div className="form-container">
           <h1 className="contact-title">
-            {`Your score was: ${Score}(${getPercentage()}%)`}{" "}
+            {`Your score was: ${Score}/20(${getPercentage()}%)`}{" "}
           </h1>
           <form className="contact-form">
             <h1 className="contact-title" id="submit-message">

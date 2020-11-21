@@ -32,7 +32,7 @@ export const questions = [
     questionText:
       "All of these examples have been taxed at times through history, but which tax did Henry VIII introduce in England in 1535?",
     answerOptions: [
-      { answerText: "beard tax", isCorrect: true },
+      { answerText: "Beard tax", isCorrect: true },
       { answerText: "Freedom tax", isCorrect: false },
       { answerText: "Soap tax", isCorrect: false },
       { answerText: "Urine tax", isCorrect: false },
@@ -57,7 +57,7 @@ export const questions = [
     ],
   },
   {
-    questionText: "It is illegal in Texas to put what on your neighbour’s Cow?",
+    questionText: "In Texas, it is illegal to put what on your neighbour’s Cow?",
     answerOptions: [
       { answerText: "Grafitti", isCorrect: true },
       { answerText: "A horse saddle", isCorrect: false },
@@ -72,7 +72,7 @@ export const questions = [
       { answerText: "Prince Phillip", isCorrect: false },
       { answerText: "Walt Disney", isCorrect: true },
       { answerText: "George Bush Jr", isCorrect: false },
-      { answerText: "Arnold Schwarzenegger", isCorrect: false },
+      { answerText: "Donald Trump", isCorrect: false },
     ],
   },
   {
@@ -127,7 +127,7 @@ export const questions = [
   },
   {
     questionText:
-      "Who is the only member of ZZ Top who doesn’t have a huge beard?",
+      "Who is the only member of ZZ Top who doesn’t have a long beard?",
     answerOptions: [
       { answerText: "Dusty Hill", isCorrect: false },
       { answerText: "Billy Gibbons", isCorrect: false },
