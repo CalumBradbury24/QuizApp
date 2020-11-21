@@ -97,6 +97,16 @@ export const questions = [
   },
   {
     questionText:
+      "Who sang about being an 'eggman' and a 'walrus'?",
+    answerOptions: [
+      { answerText: "The Rolling Stones", isCorrect: false },
+      { answerText: "The Beatles", isCorrect: true },
+      { answerText: "ACDC", isCorrect: false },
+      { answerText: "Elton John", isCorrect: false },
+    ],
+  },
+  {
+    questionText:
       "Eye of the Tiger is from the soundtrack of which 80s film?",
     answerOptions: [
       { answerText: "Rocky III", isCorrect: true },
@@ -136,6 +146,15 @@ export const questions = [
     ],
   },
   {
+    questionText: "What does a Geiger Counter measure?",
+    answerOptions: [
+      { answerText: "Fluorescence", isCorrect: false },
+      { answerText: "Radiation", isCorrect: true },
+      { answerText: "luminescence", isCorrect: false },
+      { answerText: "Cats", isCorrect: false },
+    ],
+  },
+  {
     questionText:
       "Who said this?...'I believe there would be many people alive today if there were a death penalty'.",
     answerOptions: [
@@ -164,6 +183,15 @@ export const questions = [
     ],
   },
   {
+    questionText: "When did DVDs first appear on the market?",
+    answerOptions: [
+      { answerText: "1995", isCorrect: true },
+      { answerText: "2001", isCorrect: false },
+      { answerText: "1990", isCorrect: false },
+      { answerText: "1985", isCorrect: false },
+    ],
+  },
+  {
     questionText: "Beethoven's Piano Sonata No. 14 is also commonly known as?",
     answerOptions: [
       { answerText: "Cat Duet", isCorrect: false },
@@ -173,7 +201,16 @@ export const questions = [
     ],
   },
   {
-    questionText: "For what main purpose did the Romans use imported Portuguese urine?",
+    questionText: "What were the pyramids of Egypt?",
+    answerOptions: [
+      { answerText: "Tombs", isCorrect: true },
+      { answerText: "Shrines", isCorrect: false },
+      { answerText: "Administrative Centres", isCorrect: false },
+      { answerText: "Command Posts", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "For what main purpose did the Romans import Portuguese urine?",
     answerOptions: [
       { answerText: "Fertilizer", isCorrect: false },
       { answerText: "Mouthwash", isCorrect: true },
@@ -188,6 +225,24 @@ export const questions = [
       { answerText: "Moon", isCorrect: true },
       { answerText: "Luna", isCorrect: false },
       { answerText: "Carina", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "Which weapon was first used at the Battle of the Somme in World War I?",
+    answerOptions: [
+      { answerText: "Tank", isCorrect: true },
+      { answerText: "Submarine", isCorrect: false },
+      { answerText: "Jet Fighter", isCorrect: false },
+      { answerText: "Chariots", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "In 1967, what band released the hit song 'Ruby Tuesday'?",
+    answerOptions: [
+      { answerText: "Elton John", isCorrect: false },
+      { answerText: "David Bowie", isCorrect: false },
+      { answerText: "The Beatles", isCorrect: false },
+      { answerText: "The Rolling Stones", isCorrect: true },
     ],
   },
 ];
